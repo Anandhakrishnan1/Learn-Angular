@@ -10,5 +10,6 @@ import { Component } from '@angular/core';
   styleUrl: './server.component.css'
 })
 export class ServerComponent {
-
+  serveraId = 1
+  serverName = "Development"
 }
