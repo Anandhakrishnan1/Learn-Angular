@@ -1,3 +1,4 @@
 <p>yeyyyyy....! This message is from server component</p>
-<h3>You are in {{ serverName }} {{ 'server' }} with server Id : {{ serveraId }} !</h3>
-<button [disabled]="!allowActivateServer">Activate new Server</button>
+<h3>You are in {{ serverName }} {{ 'server' }} with server Id : {{ serveraId }} ! <h2 [textContent]="serverStatus"></h2></h3> 
+<button class="btn btn-primary" [disabled]="!allowActivateServer" (click)="activateServer()">Activate new Server</button>
+
