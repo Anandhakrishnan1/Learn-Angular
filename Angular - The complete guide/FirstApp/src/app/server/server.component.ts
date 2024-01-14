@@ -12,4 +12,6 @@ import { Component } from '@angular/core';
 export class ServerComponent {
   serveraId = 1
   serverName = "Development"
+  serverStatus = "Offline"
+  allowActivateServer = false
 }
