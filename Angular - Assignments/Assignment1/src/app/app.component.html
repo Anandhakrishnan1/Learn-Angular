@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <br>
+      <br>
+      <input type="text" (keydown)="updateButtonName($event)" ngmodel="displayButtonName">
+      <br>
+      <br>
+      <hr>
+      <p>Text Color</p>
+      <input type="radio" id="red" value="Red" name="font-color">
+      <label for="Red">Red</label>
+      <input type="radio" id="green" value="Green" name="font-color">
+      <label for="Green">Green</label>
+      <input type="radio" id="blue" value="Blue" name="font-color">
+      <label for="Blue">Blue</label>
+      <br>
+      <hr>
+      <p>Background Color</p>
+      <input type="radio" id="red" value="Red" name="font-color">
+      <label for="Red">Red</label>
+      <input type="radio" id="green" value="Green" name="font-color">
+      <label for="Green">Green</label>
+      <input type="radio" id="blue" value="Blue" name="font-color">
+      <label for="Blue">Blue</label>
+      <br>
+      <hr>
+      <br>
+      <button [innerText]="buttonName" (click)="updateTextVisibility() "></button>
+      <br>
+      <br>
+      <p [innerText]="buttonName" [hidden]="!isTextVisible"></p>
+    </div>
+  </div>
+</div>
