@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -11,14 +11,6 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-changeTextColor(value: string) {
-  this.fontcolor = value;
-}
-changeBgColor(value: string) {
-  this.bgcolor = value;
-}
-@Output() newItemEvent = new EventEmitter<string>();
-
 updateText() {
   this.updatedButtonName.push(this.buttonName);
 }
