@@ -8,7 +8,7 @@
       <br>
       <hr>
       <p>Text Color</p>
-      <input type="radio" id="red" value="Red" name="font-color" (change)="changeTextColor('text-red')">
+      <input type="radio" id="red" value="text-red" name="font-color" [(ngModel)]="fontcolor">
       <label for="red">Red</label>
       <input type="radio" id="green" value="Green" name="font-color" (change)="changeTextColor('text-green')">
       <label for="Green">Green</label>
