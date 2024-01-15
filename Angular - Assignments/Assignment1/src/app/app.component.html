@@ -3,33 +3,40 @@
     <div class="col-xs-12">
       <br>
       <br>
-      <input type="text" (keydown)="updateButtonName($event)" ngmodel="displayButtonName">
+      <input type="text" [(ngModel)]="buttonName" placeholder="Please Enter button name !">
       <br>
       <br>
       <hr>
       <p>Text Color</p>
-      <input type="radio" id="red" value="Red" name="font-color">
-      <label for="Red">Red</label>
-      <input type="radio" id="green" value="Green" name="font-color">
+      <input type="radio" id="red" value="Red" name="font-color" (change)="changeTextColor('text-red')">
+      <label for="red">Red</label>
+      <input type="radio" id="green" value="Green" name="font-color" (change)="changeTextColor('text-green')">
       <label for="Green">Green</label>
-      <input type="radio" id="blue" value="Blue" name="font-color">
+      <input type="radio" id="blue" value="Blue" name="font-color" (change)="changeTextColor('text-blue')">
       <label for="Blue">Blue</label>
       <br>
       <hr>
       <p>Background Color</p>
-      <input type="radio" id="red" value="Red" name="font-color">
+      <input type="radio" id="red" value="Red" name="font-color" (change)="changeBgColor('bg-red')">
       <label for="Red">Red</label>
-      <input type="radio" id="green" value="Green" name="font-color">
+      <input type="radio" id="green" value="Green" name="font-color" (change)="changeBgColor('bg-green')">
       <label for="Green">Green</label>
-      <input type="radio" id="blue" value="Blue" name="font-color">
+      <input type="radio" id="blue" value="Blue" name="font-color" (change)="changeBgColor('bg-blue')">
       <label for="Blue">Blue</label>
       <br>
       <hr>
       <br>
-      <button [innerText]="buttonName" (click)="updateTextVisibility() "></button>
+      <button 
+        [innerText]="buttonName" 
+        (click)="updateText()" 
+        [ngClass]="[fontcolor, bgcolor]">
+          Click Here ....!
+      </button>
       <br>
       <br>
-      <p [innerText]="buttonName" [hidden]="!isTextVisible"></p>
+      <div *ngFor="let name of updatedButtonName">
+        <p>{{ name }}</p>
+      </div>
     </div>
   </div>
 </div>

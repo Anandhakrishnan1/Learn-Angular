@@ -1,22 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-updateTextVisibility() {
-  this.isTextVisible = true;
+changeTextColor(value: string) {
+  this.fontcolor = value;
 }
-updateButtonName($event: Event) {
-  this.buttonName = (<HTMLInputElement>$event.target).value;
+changeBgColor(value: string) {
+  this.bgcolor = value;
 }
-buttonName = 'Click Here....!' 
-isTextVisible = false
-title = 'Assignment1';
+@Output() newItemEvent = new EventEmitter<string>();
+
+updateText() {
+  this.updatedButtonName.push(this.buttonName);
+}
+fontcolor = ""
+bgcolor = ""
+buttonName = 'Click Here ....!'
+title = 'Assignment1'
+updatedButtonName = new Array<string>();
 }
