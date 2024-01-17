@@ -1,1 +1,12 @@
-<p>list works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul>
+                <br>
+                <div *ngFor="let actor of actorsList">
+                    <a [routerLink]="['/details',actor.id]"> <li> {{ actor.name }} </li> </a>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
