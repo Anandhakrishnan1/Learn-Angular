@@ -8,7 +8,7 @@
                         <a (click)="editMovieName(i)" [hidden]="isEditClicked"> Edit </a> &nbsp; {{ movie }} 
                     </div>
                     <div [hidden]="(!isEditClicked) || !(editingIndex===i)">
-                        <input  type="text" [value]="movie" (keydown.Enter)="updateMovieName(i,$event)">
+                        <input  type="text" [value]="movie" (keydown.Enter)="updateMovieName(i,$event)" required>
                     </div>
                 </li>
               </ul>  

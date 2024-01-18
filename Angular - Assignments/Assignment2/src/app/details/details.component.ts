@@ -15,9 +15,6 @@ updateMovieName(index: number, $event: Event) {
  this.selectedActorMovies[index] = ((<HTMLInputElement>$event.target).value);
  this.isEditClicked = false;
 }
-updateMovieList() {
-  this.isEditClicked = false;
-}
 editMovieName(index: number) {
   this.isEditClicked = true;
   this.editingIndex = index;
