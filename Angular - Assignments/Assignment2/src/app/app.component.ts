@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { AppRoutingModule } from './app.routes';
+import { GetActorsService } from './get-actors.service';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,11 @@ import { AppRoutingModule } from './app.routes';
 })
 export class AppComponent {
   title = 'Assignment2';
+  actors: any = []
+
+  constructor(private actorsService: GetActorsService){
+    this.actors = actorsService.getActorsList()
+
+    console.log(this.actors)
+  }
 }
