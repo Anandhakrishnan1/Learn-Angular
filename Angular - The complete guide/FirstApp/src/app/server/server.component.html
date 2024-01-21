@@ -1,5 +1,5 @@
 <p>yeyyyyy....! This message is from server component</p>
-<h3>You are in {{ serverName }} {{ 'server' }} with server Id : {{ serveraId }} ! <h2 [textContent]="serverStatus" [ngStyle]="{color: getColor()}"></h2></h3> 
+<h3>You are in {{ serverName }} {{ 'server' }} with server Id : {{ serveraId }} ! <h2 [textContent]="serverStatus" [ngStyle]="{color: getColor()}" [ngClass]="{online: serverStatus ==='Active'}"></h2></h3> 
 <button class="btn btn-primary" [disabled]="!allowActivateServer" (click)="activateServer()">Activate new Server</button> <br> <br>
 <button class="btn btn-primary" [disabled]="!allowActivateServer" (click)="activateUpdateServerNameField()">Update Server Name</button>
 <br>
