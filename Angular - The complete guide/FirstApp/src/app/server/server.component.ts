@@ -22,11 +22,13 @@ getColor(): any {
 activateUpdateServerNameField() {
   this.allowUpdateServerName = true
   this.isServerNameUpdated = true
+  this.servers.push(this.serverName)
 }
 activateServer() {
   this.serverStatus = "Active"
 }
   serveraId = 1
+  servers = ['Development'];
   serverName = "Development"
   serverStatus = "Offline"
   allowActivateServer = false
