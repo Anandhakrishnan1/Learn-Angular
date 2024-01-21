@@ -12,6 +12,13 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './server.component.css'
 })
 export class ServerComponent {
+getColor(): any {
+  if(this.serverStatus === 'Active'){
+    return 'green'
+  }
+  else
+    return 'red'
+}
 activateUpdateServerNameField() {
   this.allowUpdateServerName = true
   this.isServerNameUpdated = true
