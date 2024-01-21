@@ -1,18 +1,16 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-server',
   //selector: '[app-server]',
   //selector: '.app-server',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './server.component.html',
   styleUrl: './server.component.css'
 })
 export class ServerComponent {
-onUpdateServerName($event: Event) {
-this.serverName = (<HTMLInputElement>$event.target).value;
-}
 activateUpdateServerNameField() {
   this.allowUpdateServerName = true
 }
