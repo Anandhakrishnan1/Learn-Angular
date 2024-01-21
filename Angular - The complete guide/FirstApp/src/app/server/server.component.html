@@ -5,5 +5,8 @@
 <br>
 <br>
 <Label>Server Name</Label>  &nbsp; <input type="text" [disabled]="!allowUpdateServerName" class="form-Control"  [(ngModel)]="serverName">
-<h2 *ngIf="isServerNameUpdated">Server name is : {{ serverName }}</h2>
+<h2 *ngIf="isServerNameUpdated; else noUpdate">Update Server name is clicked. New Server name is : {{ serverName }}</h2>
+<ng-template #noUpdate>
+    <h2>Update server name is not clicked...!</h2>
+</ng-template>
 
