@@ -10,5 +10,13 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+click() {
+  this.isTextvisible = !this.isTextvisible;
+  this.clickCount =  this.clickCount + 1
+  this.clickList.push(this.clickCount);
+}
   title = 'Assignment3';
+  isTextvisible = false
+  clickCount = 0
+  clickList = Array<number>() 
 }
