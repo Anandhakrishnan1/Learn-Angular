@@ -7,8 +7,8 @@
       <br>
       <br>
       <div>
-        <ul *ngFor="let count of clickList">
-          <li> {{ count }}</li>
+        <ul *ngFor="let count of clickList; let i = index">
+          <li [ngStyle]="{backgroundColor: setBackgroundColor(i)}"> {{ count }}</li>
         </ul>
       </div>
     </div>

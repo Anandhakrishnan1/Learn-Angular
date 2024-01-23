@@ -10,6 +10,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+setBackgroundColor(_t13: number) {
+  if(_t13 > 3){
+    return 'blue'
+  }
+  return ''
+}
 click() {
   this.isTextvisible = !this.isTextvisible;
   this.clickCount =  this.clickCount + 1
