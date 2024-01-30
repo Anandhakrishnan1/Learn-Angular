@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './cockpit.component.css'
 })
 export class CockpitComponent {
-newServerName= '';
-newServerContent= '';
-
+  newServerName= '';
+  newServerContent= '';
+  serverElements = [];
 }
