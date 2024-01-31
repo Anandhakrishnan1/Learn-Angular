@@ -13,5 +13,5 @@ import { ServerElementComponent } from "./server-element/server-element.componen
 })
 export class AppComponent {
   title = 'DataBinding';
-  serverElements = [];
+  serverElements = [{type: 'server', name: 'Test server', content: 'Just a text...! '}];
 }

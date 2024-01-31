@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './server-element.component.css'
 })
 export class ServerElementComponent implements OnInit{
-  element: { type: string; name: string; content: string; } | undefined;
+  @Input() element: { type: string, name: string, content: string };
 
   ngOnInit(): void {
     
