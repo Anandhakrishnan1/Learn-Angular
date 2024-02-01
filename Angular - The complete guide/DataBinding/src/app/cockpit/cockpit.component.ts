@@ -24,6 +24,6 @@ export class CockpitComponent {
 }
   newServerName= '';
   newServerContent= '';
-  @Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
+  @Output('srvCreated') serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   @Output() blueprintCreated = new EventEmitter<{blueprintName: string, blueprintContent: string}>();
 }
