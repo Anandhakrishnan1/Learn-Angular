@@ -14,4 +14,20 @@ import { ServerElementComponent } from "./server-element/server-element.componen
 export class AppComponent {
   title = 'DataBinding';
   serverElements = [{type: 'server', name: 'Test server', content: 'Just a text...! '}];
+
+  onServerAdded(serverData: {serverName: string, serverContent: string}){
+    this.serverElements.push({
+      type: 'server',
+      name: serverData.serverName,
+      content: serverData.serverContent
+    });
+  }
+
+  onBlueprintAdded(blueprintData: {name: string, content: string}){
+    this.serverElements.push({
+      type: 'blueprint',
+      name: blueprintData.name,
+      content: blueprintData.content
+    })
+  }
 }
