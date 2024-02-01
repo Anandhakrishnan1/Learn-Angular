@@ -9,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrl: './server-element.component.css'
 })
 export class ServerElementComponent implements OnInit{
-  @Input() element: { type: string, name: string, content: string };
+  @Input('srvElement') element: { type: string, name: string, content: string };
 
   ngOnInit(): void {
     
