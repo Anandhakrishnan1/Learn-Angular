@@ -16,9 +16,9 @@ export class CockpitComponent {
       blueprintContent: this.newServerContent
     });
   }
-  addServer() {
+  addServer(nameInput: HTMLInputElement) {
     this.serverCreated.emit({
-      serverName: this.newServerName,
+      serverName: nameInput.value,
       serverContent: this.newServerContent
     });
 }
