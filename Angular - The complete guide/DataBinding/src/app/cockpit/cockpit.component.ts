@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -17,13 +17,15 @@ export class CockpitComponent {
     });
   }
   addServer(nameInput: HTMLInputElement) {
+    console.log(this.serverContentInput)
     this.serverCreated.emit({
       serverName: nameInput.value,
-      serverContent: this.newServerContent
+      serverContent: this.serverContentInput.nativeElement.value
     });
 }
   newServerName= '';
   newServerContent= '';
+  @ViewChild('serverContentInput') serverContentInput: ElementRef;
   @Output('srvCreated') serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   @Output('bpCreated') blueprintCreated = new EventEmitter<{blueprintName: string, blueprintContent: string}>();
 }
