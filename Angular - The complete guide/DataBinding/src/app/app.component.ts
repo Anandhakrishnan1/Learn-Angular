@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { CockpitComponent } from "./cockpit/cockpit.component";
@@ -9,7 +9,8 @@ import { ServerElementComponent } from "./server-element/server-element.componen
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, CockpitComponent, ServerElementComponent]
+    imports: [CommonModule, RouterOutlet, CockpitComponent, ServerElementComponent],
+    encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
   title = 'DataBinding';
