@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './cockpit.component.css'
 })
 export class CockpitComponent {
+deleteFirstServer() {
+  this.destroy.emit();
+}
 changeServerName() {
   this.changeSrvName.emit();
 }
@@ -31,4 +34,5 @@ changeServerName() {
   @Output('srvCreated') serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   @Output('bpCreated') blueprintCreated = new EventEmitter<{blueprintName: string, blueprintContent: string}>();
   @Output() changeSrvName = new EventEmitter<any>();
+  @Output() destroy = new EventEmitter<any>();
 }

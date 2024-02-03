@@ -44,4 +44,8 @@ export class ServerElementComponent implements OnInit{
   ngAfterViewChecked(){
     console.log('ngAfterViewChecked called...!')
   }
+
+  ngOnDestroy(){
+    console.log('ngOnDestroy called...!')
+  }
 }

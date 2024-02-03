@@ -13,6 +13,9 @@ import { ServerElementComponent } from "./server-element/server-element.componen
     encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
+onDeleteServer() {
+  this.serverElements.splice(0,1);
+}
 onChangeServerName() {
   this.serverElements[0].name = 'Changed';
 }
