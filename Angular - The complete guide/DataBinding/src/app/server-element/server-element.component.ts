@@ -36,4 +36,8 @@ export class ServerElementComponent implements OnInit{
   ngAfterContentChecked(){
     console.log('ngAfterContentChecked called...!')
   }
+
+  ngAfterViewInit(){
+    console.log('ngAfterViewInit called...!')
+  }
 }
