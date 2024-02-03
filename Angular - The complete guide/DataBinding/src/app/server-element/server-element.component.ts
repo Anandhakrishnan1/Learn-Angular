@@ -11,6 +11,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ServerElementComponent implements OnInit{
   @Input('srvElement') element: { type: string, name: string, content: string };
 
+  constructor(){
+    console.log('constructor called...!')
+  }
   ngOnInit(): void {
     
   }
