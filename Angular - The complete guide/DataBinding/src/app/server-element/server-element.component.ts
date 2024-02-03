@@ -28,4 +28,8 @@ export class ServerElementComponent implements OnInit{
   ngDoCheck(){
     console.log('ngDoCheck called...!')
   }
+
+  ngAfterContentInit(){
+    console.log('ngAfterContentInit called...!')
+  }
 }
