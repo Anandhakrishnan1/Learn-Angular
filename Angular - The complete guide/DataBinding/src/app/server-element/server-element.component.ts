@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Input, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, ContentChild, ElementRef, Input, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -12,6 +12,7 @@ export class ServerElementComponent implements OnInit{
   @Input('srvElement') element: { type: string, name: string, content: string };
   @Input() name: string;
   @ViewChild('heading',{static: true})header : ElementRef;
+  @ContentChild('serverParagraph')paragraph: ElementRef;
 
   constructor(){
     console.log('constructor called...!')
@@ -20,6 +21,7 @@ export class ServerElementComponent implements OnInit{
   ngOnInit(): void {
     console.log('ngOnInit called...!')
     console.log('Server Name :' + this.header.nativeElement.textContent)
+    console.log('Server paragraph :' + this.paragraph.nativeElement.textContent)
   }
 
   ngOnChanges(changes: SimpleChanges){
@@ -33,6 +35,7 @@ export class ServerElementComponent implements OnInit{
 
   ngAfterContentInit(){
     console.log('ngAfterContentInit called...!')
+    console.log('Server paragraph :' + this.paragraph.nativeElement.textContent)
   }
 
   ngAfterContentChecked(){
