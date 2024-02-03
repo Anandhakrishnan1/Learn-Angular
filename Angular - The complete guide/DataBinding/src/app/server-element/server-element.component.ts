@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -10,12 +10,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ServerElementComponent implements OnInit{
   @Input('srvElement') element: { type: string, name: string, content: string };
+  @Input() name: string;
 
   constructor(){
     console.log('constructor called...!')
   }
-  
+
   ngOnInit(): void {
     console.log('ngOnInit called...!')
+  }
+
+  ngOnChanges(changes: SimpleChanges){
+    console.log('ngOnChanges called...!')
+    console.log(changes)
   }
 }

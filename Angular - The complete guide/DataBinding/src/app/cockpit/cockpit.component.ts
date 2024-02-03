@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './cockpit.component.css'
 })
 export class CockpitComponent {
+changeServerName() {
+  this.changeSrvName.emit();
+}
   addBlueprint() {
     this.blueprintCreated.emit({
       blueprintName: this.newServerName,
@@ -27,4 +30,5 @@ export class CockpitComponent {
   @ViewChild('serverContentInput') serverContentInput: ElementRef;
   @Output('srvCreated') serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   @Output('bpCreated') blueprintCreated = new EventEmitter<{blueprintName: string, blueprintContent: string}>();
+  @Output() changeSrvName = new EventEmitter<any>();
 }

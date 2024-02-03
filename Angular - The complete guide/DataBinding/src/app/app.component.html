@@ -4,10 +4,11 @@
       <app-cockpit 
         (srvCreated)="onServerAdded($event)"
         (bpCreated)="onBlueprintAdded($event)"
+        (changeSrvName)="onChangeServerName()"
         > 
       </app-cockpit>
       <br>
-      <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement">
+      <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement" [name]="serverElements[0].name">
         <strong *ngIf="serverElement.type === 'server'" style="color: red;">{{ serverElement.content }}</strong>
       </app-server-element>
     </div>

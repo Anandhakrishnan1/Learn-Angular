@@ -13,6 +13,9 @@ import { ServerElementComponent } from "./server-element/server-element.componen
     encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
+onChangeServerName() {
+  this.serverElements[0].name = 'Changed';
+}
   title = 'DataBinding';
   serverElements = [{type: 'server', name: 'Test server', content: 'Just a text...! '}];
 
