@@ -8,9 +8,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  @Output() showRecipes = new EventEmitter<any>();
-  
-  showRecipies() {
-    this.showRecipes.emit();
+  @Output() showRecipes = new EventEmitter<string>();
+
+  showFeature(feature: string) {
+    this.showRecipes.emit(feature);
   }  
 }
