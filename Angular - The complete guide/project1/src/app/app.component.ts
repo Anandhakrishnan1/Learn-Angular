@@ -13,5 +13,9 @@ import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
     imports: [CommonModule, RouterOutlet, HeaderComponent, RecipesComponent, ShoppingListComponent]
 })
 export class AppComponent {
+  showRecipes() {
+    this.recipesVisible = !this.recipesVisible;
+  }
   title = 'project1';
+  recipesVisible = false;
 }

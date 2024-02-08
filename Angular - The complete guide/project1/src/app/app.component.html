@@ -1,11 +1,11 @@
 <div class="header">
-    <app-header></app-header>
+    <app-header (showRecipes)="showRecipes()"></app-header>
 </div>
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
             <h4>App component</h4> <hr>
-            <app-recipes></app-recipes> <hr>
+            <app-recipes *ngIf="recipesVisible"></app-recipes> <hr>
             <app-shopping-list></app-shopping-list>
         </div>
     </div>
