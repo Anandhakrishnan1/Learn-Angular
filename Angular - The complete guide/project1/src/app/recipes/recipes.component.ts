@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RecipeDetailComponent } from "./recipe-detail/recipe-detail.component";
 import { RecipeListComponent } from "./recipe-list/recipe-list.component";
+import { Recipe } from './models/recipe.model';
 
 @Component({
     selector: 'app-recipes',
@@ -10,5 +11,11 @@ import { RecipeListComponent } from "./recipe-list/recipe-list.component";
     imports: [RecipeDetailComponent, RecipeListComponent]
 })
 export class RecipesComponent {
+    selectedRecipe!: Recipe;
+    
+    showRecipeDetails(recipe: Recipe) {
+        debugger
+        this.selectedRecipe = recipe;
+    }
 
 }
