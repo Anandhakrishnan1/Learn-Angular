@@ -12,8 +12,6 @@ import { FormsModule } from '@angular/forms';
 export class ShoppingEditComponent {
   @Output() newIngredient = new EventEmitter<Ingredient>();
   addIngredient(name: HTMLInputElement, amount: HTMLInputElement) {
-    debugger
-    console.log(name.value);
     this.newIngredient.emit(new Ingredient(name.value, Number(amount.value)));
   }
 
