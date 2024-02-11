@@ -17,7 +17,6 @@ export class RecipeListComponent {
     ];
 
     showDetails(recipe: Recipe) {
-        debugger;
         this.showRecipeDetails.emit(recipe);
     }
 

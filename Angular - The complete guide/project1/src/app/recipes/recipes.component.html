@@ -4,7 +4,8 @@
         <app-recipe-list (showRecipeDetails)="showRecipeDetails($event)"></app-recipe-list>
     </div>
     <div class="col-md-7">
-        <app-recipe-detail [selectedrecipeItem]="selectedRecipe"></app-recipe-detail>
+        <app-recipe-detail *ngIf="selectedRecipe" [selectedrecipeItem]="this.selectedRecipe"></app-recipe-detail>
+        
     </div>
 </div>
 
