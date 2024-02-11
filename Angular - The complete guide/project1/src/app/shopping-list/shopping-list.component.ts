@@ -11,6 +11,9 @@ import { CommonModule } from '@angular/common';
     imports: [ShoppingEditComponent, CommonModule]
 })
 export class ShoppingListComponent {
+    addNewIngredient(ingredient: Ingredient) {
+        this.ingredients.push(ingredient);
+    }
     ingredients: Ingredient[] = [
         new Ingredient('Apple', 5),
         new Ingredient('Tomatoes', 10),
