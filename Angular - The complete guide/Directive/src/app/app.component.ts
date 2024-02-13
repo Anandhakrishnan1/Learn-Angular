@@ -11,4 +11,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Directive';
+  onlyOdd = false;
+  oddNumbers = [1,3,5];
+  evenNumbers = [2,4,6];
 }
