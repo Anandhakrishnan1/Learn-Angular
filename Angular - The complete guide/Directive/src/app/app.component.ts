@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, BasicHighlightDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
