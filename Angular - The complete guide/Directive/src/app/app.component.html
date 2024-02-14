@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-xs-12">
         <div
-          *appUnless="onlyOdd"
+          *appUnless="!onlyOdd"
           >
           <br>
           <li
@@ -40,6 +40,14 @@
               </li>
           </div>
         </ng-template>
+      </div>
+    </div>
+    <div class="row">
+      <br>
+      <div class="col-xs-12" [ngSwitch]="value">
+        <p *ngSwitchCase="5">value is 5</p>
+        <p *ngSwitchCase="10">value is 10</p>
+        <p *ngSwitchDefault="">default value</p>
       </div>
     </div>
   </ul>
