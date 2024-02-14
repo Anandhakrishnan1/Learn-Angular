@@ -27,19 +27,19 @@
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <div
-          *ngIf="!onlyOdd"
-          >
-          <br>
-          <li
-            class="list-group-item"
-            *ngFor="let even of evenNumbers"
-            [ngStyle]="{color: even % 2 == 0? 'green' : ''}"
-            appBasicHighlight
-            >
-            {{ even }}
-          </li>
-        </div>
+        <ng-template [ngIf]="!onlyOdd">
+          <div>
+            <br>
+              <li
+                class="list-group-item"
+                *ngFor="let even of evenNumbers"
+                [ngStyle]="{color: even % 2 == 0? 'green' : ''}"
+                appBasicHighlight
+                >
+                  {{ even }}
+              </li>
+          </div>
+        </ng-template>
       </div>
     </div>
   </ul>
