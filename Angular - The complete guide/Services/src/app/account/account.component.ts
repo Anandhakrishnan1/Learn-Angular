@@ -12,7 +12,7 @@ import { LoggingService } from '../services/logging-service.service';
 export default class AccountComponent {
   onSetTo(status: string) {
     this.statusChanged.emit({id: this.id, status: status});
-    this.loggingService.logStatus('A server status changed, new status: ' + status);
+    this.loggingService.logStatus('A server status is changed, new status: ' + status);
   }
 
   constructor(private loggingService: LoggingService){}
