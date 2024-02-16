@@ -12,7 +12,7 @@ import { LoggingService } from '../services/logging-service.service';
 export class NewAccountComponent {
   onCreateAccount(name: string, status: string) {
     this.accountCreated.emit({name: name, status: status});
-    this.loggingService.logStatus('A server status changed, new status: ' + status);
+    this.loggingService.logStatus('A new server is created with status: ' + status);
   }
   constructor(private loggingService: LoggingService){}
 
