@@ -1,16 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-8 col-md-offset-2">
-      <app-new-account
-        (accountCreated)="onAccountcreated($event)"
-        >
+      <app-new-account>
+        <!-- (accountCreated)="onAccountcreated($event)" -->
       </app-new-account>
       <app-account 
         *ngFor="let account of accounts; index as i"
         [account]="account"
         [id]="i"
-        (statusChanged)="onStatusChanged($event)"
         >
+        <!-- (statusChanged)="onStatusChanged($event)" -->
       </app-account>
     </div> 
   </div>

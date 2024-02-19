@@ -15,12 +15,12 @@ import { AccountsService } from './services/accounts.service';
 })
 export class AppComponent implements OnInit {
 
-  onAccountcreated(newAccount: { name: string; status: string }) {
-    this.accounts.push({name: newAccount.name, status: newAccount.status});
-  }
-  onStatusChanged(updatedInfo: { id: number; status: string }) {
-    this.accounts[updatedInfo.id].status = updatedInfo.status;
-  }
+  // onAccountcreated(newAccount: { name: string; status: string }) {
+  //   this.accounts.push({name: newAccount.name, status: newAccount.status});
+  // }
+  // onStatusChanged(updatedInfo: { id: number; status: string }) {
+  //   this.accounts[updatedInfo.id].status = updatedInfo.status;
+  // }
 
   accounts: {name: string, status: string}[] = [];
   title = 'Services';

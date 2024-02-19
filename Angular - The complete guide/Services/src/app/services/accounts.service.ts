@@ -20,5 +20,13 @@ export class AccountsService {
     },
   ];
 
+  CreateAccount(newAccount: { name: string; status: string }) {
+    this.accounts.push({name: newAccount.name, status: newAccount.status});
+  }
+
+  ChangeStatus(updatedInfo: { id: number; status: string }) {
+    this.accounts[updatedInfo.id].status = updatedInfo.status;
+  }
+
   constructor() { }
 }
