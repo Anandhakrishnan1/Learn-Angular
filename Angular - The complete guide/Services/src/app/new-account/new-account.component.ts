@@ -14,7 +14,7 @@ export class NewAccountComponent {
   onCreateAccount(name: string, status: string) {
     this.accountsService.CreateAccount({name: name, status: status});
     //this.accountCreated.emit({name: name, status: status});
-    this.loggingService.logStatus('A new server is created with status: ' + status);
+    // this.loggingService.logStatus('A new server is created with status: ' + status);
   }
   constructor(private loggingService: LoggingService,
               private accountsService: AccountsService){}
