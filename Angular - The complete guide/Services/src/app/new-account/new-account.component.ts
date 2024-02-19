@@ -17,7 +17,11 @@ export class NewAccountComponent {
     // this.loggingService.logStatus('A new server is created with status: ' + status);
   }
   constructor(private loggingService: LoggingService,
-              private accountsService: AccountsService){}
+              private accountsService: AccountsService){
+                this.accountsService.statusUpdated.subscribe(
+                  (status: string) => alert('Updated Status : ' + status)
+                );
+              }
 
   // @Output() accountCreated = new EventEmitter<{name: string, status: string}>();
 }
