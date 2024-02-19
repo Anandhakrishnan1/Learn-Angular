@@ -11,7 +11,7 @@ import { AccountsService } from './services/accounts.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   imports: [CommonModule, RouterOutlet, AccountComponent, NewAccountComponent],
-  providers: [AccountsService]
+  providers: []
 })
 export class AppComponent implements OnInit {
 
