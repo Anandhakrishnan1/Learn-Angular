@@ -13,10 +13,10 @@ import { RecipeService } from '../../services/recipe.service';
 })
 export class RecipeListComponent implements OnInit {
     recipes!: Recipe[];
-    @Output() showRecipeDetails = new EventEmitter<Recipe>();
+    // @Output() showRecipeDetails = new EventEmitter<Recipe>();
 
     showDetails(recipe: Recipe) {
-        this.showRecipeDetails.emit(recipe);
+        this.recipeService.showRecipeDetails.emit(recipe);
     }
 
     constructor(private recipeService: RecipeService){}
