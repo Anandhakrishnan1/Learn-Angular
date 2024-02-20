@@ -13,10 +13,11 @@ export class ShoppingListService {
   constructor() { }
 
   get(){
-    return this.ingredients.slice();
+    return this.ingredients;
   }
 
   addNewIngredient(ingredient: Ingredient) {
+    debugger;
     this.ingredients.push(ingredient);
 }
 }
