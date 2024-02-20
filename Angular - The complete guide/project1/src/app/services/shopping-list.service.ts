@@ -17,7 +17,6 @@ export class ShoppingListService {
   }
 
   addNewIngredient(ingredient: Ingredient) {
-    debugger;
     this.ingredients.push(ingredient);
 }
 }
