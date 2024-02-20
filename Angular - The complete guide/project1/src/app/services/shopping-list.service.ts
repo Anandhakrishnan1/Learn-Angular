@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Ingredient } from '../recipes/models/ingredient.model';
 
 @Injectable({
@@ -10,13 +10,16 @@ export class ShoppingListService {
     new Ingredient('Apple', 5),
     new Ingredient('Tomatoes', 10),
   ];
+
+  ingredientChanged = new EventEmitter<Ingredient[]>();
   constructor() { }
 
   get(){
-    return this.ingredients;
+    return this.ingredients.slice();
   }
 
   addNewIngredient(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
+    this.ingredientChanged.emit(this.ingredients);
 }
 }
