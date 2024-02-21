@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
 import { UsersComponent } from "./users/users.component";
 import { ServersComponent } from "./servers/servers.component";
@@ -10,7 +10,7 @@ import { ServersComponent } from "./servers/servers.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, HomeComponent, UsersComponent, ServersComponent, RouterLink]
+    imports: [CommonModule, RouterOutlet, HomeComponent, UsersComponent, ServersComponent, RouterLink, RouterLinkActive]
 })
 export class AppComponent {
   title = 'Routing';
