@@ -12,6 +12,6 @@ export class HomeComponent {
   constructor(private router: Router){}
 
   onLoadServers(){
-    this.router.navigate(['servers']);
+    this.router.navigate(['/servers']);
   }
 }
