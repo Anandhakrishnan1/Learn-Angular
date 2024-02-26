@@ -13,11 +13,13 @@ export const routes: Routes = [
     },
     {
         path: 'users',
-        component: UsersComponent
-    },
-    {
-        path: 'users/:id/:name',
-        component: UserComponent
+        component: UsersComponent,
+        children: [
+            {
+                path: ':id',
+                component: UserComponent
+            },    
+        ]
     },
     {
         path: 'servers',
@@ -33,12 +35,4 @@ export const routes: Routes = [
             }
         ]
     }
-    // ,{
-    //     path: 'servers/:id/edit',
-    //     component: EditServerComponent
-    // },
-    // {
-    //     path: 'servers/:id',
-    //     component: ServerComponent
-    // }
 ];
