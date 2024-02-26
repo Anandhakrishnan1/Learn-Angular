@@ -21,14 +21,24 @@ export const routes: Routes = [
     },
     {
         path: 'servers',
-        component: ServersComponent
-    },
-    {
-        path: 'servers/:id/edit',
-        component: EditServerComponent
-    },
-    {
-        path: 'servers/:id',
-        component: ServerComponent
+        component: ServersComponent,
+        children: [
+            {
+                path: ':id/edit',
+                component: EditServerComponent
+            },
+            {
+                path: ':id',
+                component: ServerComponent
+            }
+        ]
     }
+    // ,{
+    //     path: 'servers/:id/edit',
+    //     component: EditServerComponent
+    // },
+    // {
+    //     path: 'servers/:id',
+    //     component: ServerComponent
+    // }
 ];
