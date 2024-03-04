@@ -11,7 +11,8 @@ import { CanDeactivateGuardService } from './can-deactivate-guard.service';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, HomeComponent, UsersComponent, ServersComponent, RouterLink, RouterLinkActive]
+    imports: [CommonModule, RouterOutlet, HomeComponent, UsersComponent, ServersComponent, RouterLink, RouterLinkActive],
+    providers: [CanDeactivateGuardService]
 })
 export class AppComponent {
   title = 'Routing';
