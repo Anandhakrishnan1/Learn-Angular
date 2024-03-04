@@ -4,6 +4,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
 import { UsersComponent } from "./users/users.component";
 import { ServersComponent } from "./servers/servers.component";
+import { CanDeactivateGuardService } from './can-deactivate-guard.service';
 
 @Component({
     selector: 'app-root',
