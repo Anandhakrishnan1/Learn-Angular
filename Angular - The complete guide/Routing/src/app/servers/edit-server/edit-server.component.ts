@@ -3,7 +3,7 @@ import { ServersService } from '../servers.service';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { CanComponentDeactivate } from '../../can-deactivate-guard.service';
+import { CanComponentDeactivate, CanDeactivateGuardService } from '../../can-deactivate-guard.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -25,15 +25,14 @@ export class EditServerComponent implements OnInit, CanComponentDeactivate {
               private router: Router) { }
 
   ngOnInit() {
+    this.server = this.serversService.getServer(1)!;
+    this.serverName = this.server.name;
+    this.serverStatus = this.server.status;
     this.route.queryParams.subscribe(
       (queryParams: Params) => {
         this.allowEdit = queryParams['allowEdit'] === '1' ? true : false;
       }
     )
-    const id = this.route.snapshot.params['id'];
-    this.server = this.serversService.getServer(id)!;
-    this.serverName = this.server.name;
-    this.serverStatus = this.server.status;
   }
 
   onUpdateServer() {
