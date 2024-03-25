@@ -8,6 +8,7 @@ import { ServerComponent } from './servers/server/server.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuardService } from './auth-guard.service';
 import { CanDeactivateGuardService } from './can-deactivate-guard.service';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 export const routes: Routes = [
     {
@@ -41,8 +42,14 @@ export const routes: Routes = [
     },{
         path: 'not-found',
         component: PageNotFoundComponent
-    },{
+    },
+    // {
+    //     path: '**',
+    //     redirectTo: '/not-found'
+    // }
+    {
         path: '**',
-        redirectTo: '/not-found'
+        component: ErrorPageComponent,
+        data: {message: 'Page not found..!'}
     }
 ];
