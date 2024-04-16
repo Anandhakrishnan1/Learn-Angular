@@ -20,7 +20,6 @@ export class RecipesComponent implements OnInit {
     ngOnInit(): void {
         this.recipeService.showRecipeDetails.subscribe(
             (recipe: Recipe) => {
-              debugger
               this.selectedRecipe = recipe
             }
           );
