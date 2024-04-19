@@ -22,10 +22,11 @@ export class RecipeDetailComponent implements OnInit {
     this.route.params.subscribe(
       (params: Params) => {
         this.id = +params['id'];
+        this.selectedrecipeItem = this.recipeSevice.getRecipe(this.id);
       }
     );
 
-    this.selectedrecipeItem = this.recipeSevice.getRecipe(this.id);
+    
   }
 
   addToShoppingList() {

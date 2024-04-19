@@ -5,9 +5,9 @@
 </div>
 <hr>
 <div class="row">
-    <div class="col-xs-12" *ngFor="let selectedRecipe of recipes">
+    <div class="col-xs-12" *ngFor="let selectedRecipe of recipes; let i = index">
         <a (click)="showDetails(selectedRecipe)">
-            <app-recipe-item [recipe]="selectedRecipe" ></app-recipe-item>
+            <app-recipe-item [recipe]="selectedRecipe" [index]="i"></app-recipe-item>
         </a>
         
     </div>
