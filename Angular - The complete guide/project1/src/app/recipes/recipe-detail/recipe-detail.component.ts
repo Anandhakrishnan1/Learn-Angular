@@ -3,12 +3,12 @@ import { Recipe } from '../models/recipe.model';
 import { DropdownDirective } from '../../shared/dropdown.directive';
 import { CommonModule } from '@angular/common';
 import { RecipeService } from '../../services/recipe.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-detail',
   standalone: true,
-  imports: [DropdownDirective, CommonModule],
+  imports: [DropdownDirective, CommonModule, RouterLink],
   templateUrl: './recipe-detail.component.html',
   styleUrl: './recipe-detail.component.css'
 })
