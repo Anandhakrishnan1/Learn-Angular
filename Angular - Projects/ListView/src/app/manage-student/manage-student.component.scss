@@ -1,0 +1,66 @@
+.mdc-card{
+    position: absolute;
+    width: 968px;
+    height: 700px;
+    left: calc(50% - 968px/2 + 156px);
+    top: 100px; 
+    background-color: rgb(196, 230, 230);
+}
+
+.title-container{
+    position: absolute;
+    left: 3.93%;
+    right: 84.71%;
+    top: 3.69%;
+    bottom: 92.24%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.add-student{
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    left: 690px;
+    top: 30px;
+}
+
+.mat-mdc-card-content{
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    top: 16.13%;
+    bottom: 11.58%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.mat-elevation-z8{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.mat-mdc-header-cell{
+    left: 21.69%;
+    right: 71.07%;
+    top: 16.13%;
+    bottom: 81.28%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;letter-spacing: -0.01em;
+    padding: auto;
+    color: #B5B7C0;
+}
+
+
+
+
